@@ -1,0 +1,66 @@
+/* Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+
+/* Themes */
+:root {
+    /* Basic theme */
+    --fg: #191c1e;
+    --bg: #edf1f4;
+
+    /* Extras */
+    --link:#84e2ff;
+    --accent: #aedeee;
+
+    /* On/Off Sliders */
+    --theme: #fde7ab;
+    //--off: #5c6062;
+
+    /* Particles & Colours */
+    --red: #bb534a;
+    --yellow: #fde7ab;
+    --green: #4da46d;
+    --spring: #9af9e9;
+}
+
+[data-theme="dark"] {
+    /* Basic theme */
+    --fg: #c7cbce;
+    --bg: #101416;
+
+    /* Extras */
+    --link:#00dcff;
+    --accent: #004363;
+
+    /* On/Off Sliders */
+    --theme: #191c1e;
+    //--off: #464a4c;
+
+    /* Particles & Colours */
+    --red: #cf695f;
+    --yellow: #e6c964;
+    --green: #72913f;
+    --spring: #00fee4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+/* Component imports */
+@import "components/navbar";
+@import "components/sliders";
+@import "components/main";
+@import "components/footer";

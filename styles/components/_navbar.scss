@@ -1,0 +1,66 @@
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--bg);
+  max-height: 65px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: table;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+
+    li {
+      display: table-cell; 
+      position: relative; 
+      padding: 1vh;
+
+      a {
+        color: var(--fg);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+
+        font-family: "Overpass", sans-serif;
+        font-size: smaller;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--link);
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }  
+
+  .theme-changer-container {
+    margin-left: auto;
+    align-self: flex-end;
+    align-content: flex-end;
+    list-style: none;
+    display: table;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+  }
+}

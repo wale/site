@@ -1,0 +1,17 @@
+main#mainContent {
+  flex: 1;
+  align-self: right;
+  align-content: right;
+  padding-left: 45px;
+  padding-top: 45px;
+
+  h1, h2, h3, p {
+    font-family: "Overpass", sans-serif;
+
+    &#logo {
+      font-family: "Voces", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+}
