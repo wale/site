@@ -3,9 +3,13 @@ This is my personal site written with Next.JS and TypeScript.
 
 ## Roadmap
 [x] Homepage
+
 [ ] Blog
+
 [ ] About
+
 [ ] Credits
+
 [ ] Portfolio
 
 ## License

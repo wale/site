@@ -21,34 +21,34 @@ const ToggleSwitch = ({ id, name, checked, onChange, optionLabels, small, disabl
         checked={checked}
         onChange={e => onChange(e.target.checked)}
         disabled={disabled}
-        />
-        {id ? (
-          <label className="toggle-switch-label"
-                 htmlFor={id}
-                 tabIndex={ disabled ? -1 : 1 }
-                 onKeyDown={ (e) => { handleKeyPress(e) }}>
-            <span
-              className={
-                disabled
-                  ? "toggle-switch-inner toggle-switch-disabled"
-                  : "toggle-switch-inner"
-              }
-              data-yes={optionLabels[0]}
-              data-no={optionLabels[1]}
-              tabIndex={-1}
-            />
-            <span
-              className={
+      />
+      {id ? (
+        <label className="toggle-switch-label"
+          htmlFor={id}
+          tabIndex={ disabled ? -1 : 1 }
+          onKeyDown={ (e) => { handleKeyPress(e) }}>
+          <span
+            className={
+              disabled
+                ? "toggle-switch-inner toggle-switch-disabled"
+                : "toggle-switch-inner"
+            }
+            data-yes={optionLabels[0]}
+            data-no={optionLabels[1]}
+            tabIndex={-1}
+          />
+          <span
+            className={
               disabled
                 ? "toggle-switch-switch toggle-switch-disabled"
                 : "toggle-switch-switch"
-              }
-              tabIndex={-1}
-            />
-          </label>
-        ) : null}
-      </div>
-    );
+            }
+            tabIndex={-1}
+          />
+        </label>
+      ) : null}
+    </div>
+  );
 }
 
 // Set optionLabels for rendering.

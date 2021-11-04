@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <body>
       <Navbar/>
-    <main id="mainContent">
-      <h1 id="logo">/wɐːli:/</h1>
-      <h2>Java developer, randomly creative.</h2>
-    </main>
+      <main id="mainContent">
+        <h1 id="logo">/wɐːli:/</h1>
+        <h2>Java developer, randomly creative.</h2>
+      </main>
       <Footer/>
     </body>
   ) 
