@@ -2,15 +2,15 @@
 This is my personal site written with Next.JS and TypeScript.
 
 ## Roadmap
-[x] Homepage
+- [x] Homepage
 
-[ ] Blog
+- [ ] Blog
 
-[ ] About
+- [ ] About
 
-[ ] Credits
+- [ ] Credits
 
-[ ] Portfolio
+- [ ] Portfolio
 
 ## License
 This site is licensed under the MIT license.
