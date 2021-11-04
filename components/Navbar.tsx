@@ -1,4 +1,4 @@
-import ThemeChanger from "./ThemeChanger";
+import {ThemeChanger} from "./ThemeChanger";
 
 export const Navbar = () => {
   return (

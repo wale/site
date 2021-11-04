@@ -1,17 +1,17 @@
-main#mainContent {
-  flex: 1;
-  align-self: right;
-  align-content: right;
+div#main {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 1rem;
   padding-left: 45px;
-  padding-top: 45px;
+  padding-top: 125px;
 
-  h1, h2, h3, p {
-    font-family: "Overpass", sans-serif;
-
-    &#logo {
-      font-family: "Voces", cursive;
-      font-weight: 400;
-      font-style: normal;
-    }
+  div.item {
+    flex: 0 0 calc(33% - 1rem);
   }
+}
+
+h1,h2,h3,p {
+  font-family: "Overpass", sans-serif;
 }
