@@ -2,7 +2,7 @@
 layout: "../layouts/BlogPost.astro"
 title: "About Me"
 description: "Lorem ipsum dolor sit amet"
-updatedDate: "August 08 2022"
+updatedDate: "November 15 2022"
 ---
 
 I'm Duale Siad, pronounced like "doo-AR-lee SEE-ad" [duɐːliː siːæd], otherwise known on the internet as "Wale" [wɐːliː]. I'm a Java programmer, occasional blogger, and hobbyist photographer.
