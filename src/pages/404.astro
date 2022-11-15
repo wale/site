@@ -1,0 +1,21 @@
+---
+import Header from "../components/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+import { SITE_TITLE } from "../config";
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <BaseHead title={SITE_TITLE} description="Page not found." />
+    </head>
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <h1>😢 Sorry!</h1>
+            <h4>You got 404'd.</h4>
+            <p>I don't think this is what you're looking for.</p>
+            <p>The page you're looking for may have been moved, or never existed at all.</p>
+        </main>
+    </body>
+</html>
