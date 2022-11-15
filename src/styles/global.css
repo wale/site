@@ -31,18 +31,14 @@ code {
   word-wrap: normal;
 }
 a {
-  border-bottom: 1px solid var(--pine);
-  color: var(--pine);
+  border-bottom: 1px solid var(--rose);
+  color: var(--rose);
   font-family: "Inter", sans-serif;
   text-decoration: none;
 }
 a:hover {
   border-bottom: 0;
 }
-a:visited {
-  color: var(--subtle);
-}
-
 b,
 strong {
   color: var(--text);
