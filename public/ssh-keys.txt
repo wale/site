@@ -1,0 +1,5 @@
+# --- BEGIN wale.au/ssh.txt ---
+# Used for machines authenticated through ssh
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILQvRd8L2DBperKaK+tk/NFopNbvsiZ0ZP3BKCerv7JC me@wale.id.au
+# --- END wale.au/ssh.txt ---
+
