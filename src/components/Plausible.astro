@@ -1,0 +1,8 @@
+---
+export interface Props {
+    domain: string;
+}
+const { domain = "wale.au" } = Astro.props;
+---
+
+<script defer data-domain={domain} src="https://plausible.io/js/script.js"></script>

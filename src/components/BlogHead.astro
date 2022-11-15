@@ -12,7 +12,12 @@ export interface Props {
 }
 
 const { title, description, image = '/placeholder-social.jpg', pubDate, modDate } = Astro.props;
+
+import Plausible from './Plausible.astro';
 ---
+
+<!-- Plausible Analytics -->
+<Plausible domain="wale.au" />
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
