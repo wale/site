@@ -1,0 +1,33 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import ResponsiveIcon from './ResponsiveIcon.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<header>
+	<ResponsiveIcon />
+	<div class="info">
+		<h2>
+			{SITE_TITLE}
+		</h2>
+		<p>
+			{SITE_DESCRIPTION}
+		</p>
+	</div>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/about">About</HeaderLink>
+		<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank">Twitter</HeaderLink>
+		<HeaderLink href="https://github.com/wale" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="https://merveilles.town/@wale" target="_blank">Mastodon</HeaderLink>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0em 0 2em;
+	}
+	h2, p {
+		margin: 0.5em 0;
+	}
+</style>

@@ -1,0 +1,58 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=JetBrains Mono");
+
+/* @import url("https://raw.githubusercontent.com/rose-pine/prism/main/dist/prism-rose-pine-main.css"); */
+
+:root {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --text: #e0def4;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --iris: #c4a7e7;
+  --subtle: #908caa;
+  --font-main: "Inter", sans-serif;
+}
+
+body {
+  margin: 5% auto;
+  background: var(--base);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-shadow: 0 1px 0 var(--base);
+  max-width: 73%;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: small;
+  word-wrap: normal;
+}
+a {
+  border-bottom: 1px solid var(--pine);
+  color: var(--pine);
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 0;
+}
+a:visited {
+  color: var(--subtle);
+}
+
+b,
+strong {
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--iris);
+}
+

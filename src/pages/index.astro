@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>👋🏾 Hello!</h1>
+			<p>I'm Wale! This is my personal site where I blog, as well as provide an overview of what I do.</p>
+			<p>Check out the <strong><a href="/blog">blog</a></strong> for my latest articles.</p>
+			<p>This site might not have enough personality but hey.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
