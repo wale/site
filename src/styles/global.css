@@ -4,51 +4,89 @@
 /* @import url("https://raw.githubusercontent.com/rose-pine/prism/main/dist/prism-rose-pine-main.css"); */
 
 :root {
-  --base: #191724;
-  --surface: #1f1d2e;
-  --text: #e0def4;
-  --rose: #ebbcba;
-  --pine: #31748f;
-  --iris: #c4a7e7;
-  --subtle: #908caa;
-  --font-main: "Inter", sans-serif;
+    --base: #191724;
+    --surface: #1f1d2e;
+    --text: #e0def4;
+    --rose: #ebbcba;
+    --pine: #31748f;
+    --iris: #c4a7e7;
+    --subtle: #908caa;
+    --font-main: "Inter", sans-serif;
 }
 
 body {
-  margin: 5% auto;
-  background: var(--base);
-  color: var(--text);
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  text-shadow: 0 1px 0 var(--base);
-  max-width: 73%;
+    margin: 5% auto;
+    background: var(--base);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-shadow: 0 1px 0 var(--base);
+    max-width: 73%;
 }
 
 code {
-  font-family: "JetBrains Mono", monospace;
-  font-size: small;
-  word-wrap: normal;
+    font-family: "JetBrains Mono", monospace;
+    font-size: small;
+    word-wrap: normal;
 }
+
 a {
-  border-bottom: 1px solid var(--rose);
-  color: var(--rose);
-  font-family: "Inter", sans-serif;
-  text-decoration: none;
+    border-bottom: 1px solid var(--rose);
+    color: var(--rose);
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
 }
+
 a:hover {
-  border-bottom: 0;
+    border-bottom: 0;
 }
+
 b,
 strong {
-  color: var(--text);
+    color: var(--text);
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--iris);
+    color: var(--iris);
 }
 
+@media screen and (min-width: 600px) {
+    code {
+        counter-reset: step;
+        counter-increment: step 0;
+    }
+
+    code .line::before {
+        content: counter(step);
+        counter-increment: step;
+        width: 1rem;
+        margin-right: 1.5rem;
+        display: inline-block;
+        text-align: right;
+        color: var(--subtle);
+    }
+}
+
+@media screen and (min-width: 600px) {
+  main > img, main > article > img {
+    width: 45%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    max-width: 90%;
+  }
+  main > img, main > article > img {
+    width: 85%;
+    height: auto;
+  }
+}
