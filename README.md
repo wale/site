@@ -9,7 +9,7 @@ This site utilises [Astro](https://astro.build) and the [Rosé Pine](https://ros
 > I will not provide any support on building this site outside of these following instructions.
 
 <details>
-<summary>`npm` installations</summary>
+<summary><strong>npm</strong> installations</summary>
 <br>
 ```
 npm install
@@ -20,7 +20,7 @@ npm run build # To build the site, resulting files are in the dist/ folder.
 </details>
 
 <details>
-<summary>`yarn` installations</summary>
+<summary><strong>yarn</strong> installations</summary>
 <br>
 ```
 yarn install
@@ -31,7 +31,7 @@ yarn build # To build the site, resulting files are in the dist/ folder.
 </details>
 
 <details>
-<summary>`pnpm` installations</summary>
+<summary><strong>pnpm</strong> installations</summary>
 <br>
 ```
 pnpm install
