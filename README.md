@@ -11,8 +11,7 @@ This site utilises [Astro](https://astro.build) and the [Rosé Pine](https://ros
 <details>
 <summary><strong>npm</strong> installations</summary>
 <br>
-<pre><code>
-npm install
+<pre><code>npm install
 npm run dev # To serve the development site
 npm run preview # To serve the 'preview'
 npm run build # To build the site, resulting files are in the dist/ folder.
@@ -22,8 +21,7 @@ npm run build # To build the site, resulting files are in the dist/ folder.
 <details>
 <summary><strong>yarn</strong> installations</summary>
 <br>
-<pre><code>
-yarn install
+<pre><code>yarn install
 yarn dev # To serve the development site
 yarn preview # To serve the 'preview'
 yarn build # To build the site, resulting files are in the dist/ folder.
@@ -33,8 +31,7 @@ yarn build # To build the site, resulting files are in the dist/ folder.
 <details>
 <summary><strong>pnpm</strong> installations</summary>
 <br>
-<pre><code>
-pnpm install
+<pre><code>pnpm install
 pnpm run dev # To serve the development site
 pnpm run preview # To serve the 'preview'
 pnpm run build # To build the site, resulting files are in the dist/ folder.
