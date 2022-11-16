@@ -20,5 +20,9 @@ The instructions on how I manage my post creation workflow are as follows:
 
 To have another individual review your posts, you can [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) from the pull request page. A reviewer does **not** have to have push access to the repository, but they will have to be added as a 'collaborator'.
 
+Any modifications to the post will be automatically added to the pull request.
+
 ## The catch
 Branch names, which in this case, correspond to the format `post/<title>`, can only be a total of 244 characters on many Git providers, such as Github (excluding the preceding `refs/heads/` before the branch name), so your post titles can't be obscenely long. 
+
+Also, this post itself is in this [pull request](https://github.com/wale/site/pull/1) system.
