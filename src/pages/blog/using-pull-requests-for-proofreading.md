@@ -22,7 +22,11 @@ To have another individual review your posts, you can [request a review](https:/
 
 Any modifications to the post will be automatically added to the pull request.
 
-## The catch
-Branch names, which in this case, correspond to the format `post/<title>`, can only be a total of 244 characters on many Git providers, such as Github (excluding the preceding `refs/heads/` before the branch name), so your post titles can't be obscenely long. 
+The workflow of this site also includes a "preview" feature on pull requests that is managed by [Vercel](https://vercel.com), the hosting provider that I use to manage the builds of the site.
+
+![Vercel preview comment](https://media.discordapp.net/attachments/455992467578159104/1042257403325992980/image.png)
 
 Also, this post itself is in this [pull request](https://github.com/wale/site/pull/1) system.
+
+## The catch
+Branch names, which in this case, correspond to the format `post/<title>`, can only be a total of 244 characters on many Git providers, such as Github (excluding the preceding `refs/heads/` before the branch name), so your post titles can't be obscenely long. This catch may differ depending on what Git software you're using to manage this system.
