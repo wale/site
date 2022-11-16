@@ -18,7 +18,7 @@ The instructions on how I manage my post creation workflow are as follows:
 - I push the branch, as normal.
 - I use the GitHub [pull request UI](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to open the PR and allow people to review.
 
-To have another individual review your posts, you can [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) from the pull request page. A reviewer does **not** have to have push access to the repository.
+To have another individual review your posts, you can [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) from the pull request page. A reviewer does **not** have to have push access to the repository, but they will have to be added as a 'collaborator'.
 
 ## The catch
 Branch names, which in this case, correspond to the format `post/<title>`, can only be a total of 244 characters on many Git providers, such as Github (excluding the preceding `refs/heads/` before the branch name), so your post titles can't be obscenely long. 
