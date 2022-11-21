@@ -5,4 +5,4 @@ export interface Props {
 const { domain = "wale.au" } = Astro.props;
 ---
 
-<script defer data-domain={domain} src="https://plausible.io/js/script.js"></script>
+<script defer data-domain={domain} data-api="/api/event" src="/js/script.js"></script>
