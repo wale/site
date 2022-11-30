@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkTwemoji from "remark-twemoji";
 
+import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 // https://astro.build/config
@@ -15,7 +16,7 @@ export default defineConfig({
 	markdown: {
 		extendDefaultPlugins: true,
 		remarkPlugins: [remarkUnwrapImages, remarkTwemoji],
-		rehypePlugins: [rehypeAutolinkHeadings],
+		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 		syntaxHighlight: "shiki",
 		shikiConfig: {
 			theme: 'rose-pine',
