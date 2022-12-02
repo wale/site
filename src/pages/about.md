@@ -9,4 +9,4 @@ I'm Duale Siad, pronounced like "doo-AR-lee SEE-ad" /duɐːliː siːæd/, otherw
 
 I mainly dabble in open source work using the programming languages **Kotlin** and **Java**, as well as **TypeScript**, **JavaScript** and **Python**.
 
-I'm currently a student at [RMIT University](https://rmit.edu.au) that studies the [Diploma of Information Technology](https://www.rmit.edu.au/study-with-us/levels-of-study/vocational-study/diplomas/diploma-of-information-technology-c5402) course. 
+I am currently a student at [Swinburne University](https://swinburne.edu.au), where I commence the [BA-ICT](https://www.swinburne.edu.au/study/course/bachelor-of-information-and-communication-technology/) course in 2023.
