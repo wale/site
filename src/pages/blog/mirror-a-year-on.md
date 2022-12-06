@@ -16,7 +16,7 @@ The `wale/mirrors` project was born out of a personal need of stable, fast Austr
 
 So I did it anyway, in spite of my low income as a student in higher education. At first, I went with a cheap option, where I first spent A$15/mo on a server with 500GB of storage and 3TB of data transfer at [BinaryLane](https://www.binarylane.com.au/), then spent A$22.50/mo on an upgrade to a server with 1TB of HDD storage and 4TB of data transfer.
 
-After that was proving to not be enough, a friend of mine (h/t [Ovyerus](https://ovyerus.com)) lent me a VM with enough storage and network bandwidth to support the traffic that my mirror pulls through CloudFlare.
+After that was proving to not be enough, a friend of mine (h/t [Ovyerus](https://ovyerus.com/?utm_medium=referral&utm_source=Wale&utm_campaign=friends)) lent me a VM with enough storage and network bandwidth to support the traffic that my mirror pulls through CloudFlare.
 
 ## The fun part: statistics
 Over the last seven days of this post being written (6th of December 2022), I have achieved 508.61GB of total data transfer, where the majority is being served directly by the server.
@@ -40,4 +40,4 @@ I have a lot of plans for the mirror over the next year, which include:
 - Rewrite the frontend of the mirrors service.
 
 ## Thanks!
-Over the past year, I've been running the mirror mainly out of my own pocket and through help from friends, such as [Ovyerus](https://ovyerus.com). I could not have expected how popular this mirror was, even outside of Australia, and how well it has been received. Thank you so much for using this mirror, and for helping me learn new things.
+Over the past year, I've been running the mirror mainly out of my own pocket and through help from friends, such as [Ovyerus](https://ovyerus.com/?utm_medium=referral&utm_source=Wale&utm_campaign=friends). I could not have expected how popular this mirror was, even outside of Australia, and how well it has been received. Thank you so much for using this mirror, and for helping me learn new things.
