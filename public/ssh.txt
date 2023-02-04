@@ -2,7 +2,7 @@
 # Used for machines authenticated through ssh
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILQvRd8L2DBperKaK+tk/NFopNbvsiZ0ZP3BKCerv7JC me@wale.id.au
 # Used for Git and machines authenticated through SSH (YubiKey)
-sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIGz/e4mlqusCcwfW5SZT1YGO7g/ncoocFP83nsame0+TAAAAE3NzaDpnaXQteXViaWtleS1zc2g= wale@dreamcatcher
+sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIIS9VgtdA86mkdvgS/PCmoaE25KcJ4pjiDH2HkCn8KsfAAAAB3NzaDpnaXQ= wale@dreamcatcher
 # Used for Git and machines authenticated through SSH (other YubiKey)
-sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIGxyOaWQJZnrKM5Ii78AI0oD7Hmra3cjl6GDr3/z0AwgAAAAE3NzaDpnaXQteXViaWtleS1zc2g= wale@dreamcatcher
+sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAICO0XokSE3g9bnpElfd/kKAEEt/P1XrTjlRZ0G7x0MI4AAAAB3NzaDpnaXQ= wale@dreamcatcher
 # --- END wale.au/ssh.txt ---
