@@ -4,7 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ResponsiveIcon from '../components/ResponsiveIcon.astro';
 
-import {format, parseISO} from "date-fns";
+import {format} from "date-fns-tz";
+import {parseISO} from "date-fns";
 
 export interface Props {
 	content: {
@@ -31,7 +32,7 @@ console.log(_pubDate);
 // The formats I'm passing through explicitly show the timezone I'm working in (AEST/AEDT),
 // as a stand-in for the zero client side JS (besides analytics) requirement
 // I have, for reasons.
-const fmt = (d: Date) => format(d, "PPPP, hh:mm aa OO");
+const fmt = (d: Date) => format(d, "PPPP, h:mm aa OO");
 
 const pubDate = fmt(parseISO(_pubDate));
 const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
