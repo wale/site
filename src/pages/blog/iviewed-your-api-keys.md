@@ -2,8 +2,8 @@
 layout: "../../layouts/BlogPost.astro"
 title: "iViewed your API keys"
 description: "Reporting on a security issue on ABC's iView."
-pubDate: "April 14 2022"
-updatedDate: "November 15 2022"
+pubDate: "2022-04-14T00:20:00+10:00"
+updatedDate: "2022-11-15T19:44:00+11:00"
 heroImage: "https://btw.i-use-ar.ch/i/0mbhi.jpg"
 ---
 

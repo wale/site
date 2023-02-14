@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Mirror: [Almost] a year on"
 description: "The backstory behind this project, and some news."
-pubDate: "December 6 2022"
+pubDate: "2022-12-06T13:37:00+11:00"
 ---
 
 Hello!

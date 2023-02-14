@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Using pull requests for proof reading"
 description: "I managed to use Git in an unconventional manner."
-pubDate: "November 16 2022"
+pubDate: "2022-11-16T12:43:00+11:00"
 ---
 
 After launching my new site, I realised that, now that all of my blog posts were stored in the file-system, and directly pushed to Git...

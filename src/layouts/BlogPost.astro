@@ -4,29 +4,51 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ResponsiveIcon from '../components/ResponsiveIcon.astro';
 
+import {format, parseISO} from "date-fns";
+
 export interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate?: string;
+		pubDate: string;
 		updatedDate?: string;
 		heroImage?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate: _pubDate, updatedDate: _updatedDate, heroImage },
 } = Astro.props;
+
+console.log(_pubDate);
+
+// Formatted ISO 8601 dates, which are only passed through to the frontend
+// I want to show both local system date, along with the dates in my local
+// timezone, but that requires a bit of client-side JS I really don't want
+// to add right now. I don't want to scare off privacy minded users, bruh.
+// This might be temporary, I don't know yet. We'll see.
+
+// The formats I'm passing through explicitly show the timezone I'm working in (AEST/AEDT),
+// as a stand-in for the zero client side JS (besides analytics) requirement
+// I have, for reasons.
+const fmt = (d: Date) => format(d, "PPPP, hh:mm aa OO");
+
+const pubDate = fmt(parseISO(_pubDate));
+const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 ---
 
 <html lang="en">
 	<head>
+		<!-- 
+			Even though I'm formatting the dates for the frontend, I am sending the raw ISO-8601 dates
+			for articles for OpenGraph article embeds to parse correctly. How did I miss this earlier?
+		-->
 		<BlogHead 
 			title={title} 
 			description={description} 
 			image={heroImage}
-			pubDate={pubDate}
-			modDate={updatedDate}
+			pubDate={_pubDate}
+			modDate={_updatedDate} 
 			/>
 		<style>
 			.title {
@@ -53,7 +75,7 @@ const {
 			{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 			<article>
 				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
+				{pubDate && <time>Published on {pubDate}</time>}
 				{
 					updatedDate && (
 						<div>
