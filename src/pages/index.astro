@@ -10,14 +10,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image="/seo.png" />
 	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>👋🏾 Hello!</h1>
-			<p>I'm Wale! This is my personal site where I blog, as well as provide an overview of what I do.</p>
-			<p>Check out the <strong><a href="/blog">blog</a></strong> for my latest articles.</p>
-			<p>This site might not have enough personality but hey.</p>
-		</main>
-		<Footer />
+	<body class="bg-base">
+		<div id="main" class="flex items-center justify-center h-screen w-screen px-4 py-4 sm:px-0 sm:py-0">
+			<div id="row" class="row space-y-4 sm:gap-y-6">
+				<Header title={SITE_TITLE} />
+				<main class="text-text">
+					<h1>👋🏾 Hello!</h1>
+					<p>I'm Wale! This is my personal site where I blog, as well as provide an overview of what I do.</p>
+					<p>Check out the <strong><a href="/blog">blog</a></strong> for my latest articles.</p>
+					<p>This site might not have enough personality but hey.</p>
+				</main>
+			</div>
+		</div>
 	</body>
 </html>
