@@ -53,24 +53,27 @@ const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 		/>
 	</head>
 
-	<body>
-		<Header />
-		<main>
-			{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-			<article>
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>Published on {pubDate}</time>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
-						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
-		</main>
-		<Footer />
+	<body class="bg-base">
+		<div id="main" class="flex items-center justify-center w-screen py-8 px-8 sm:px-0 sm-py-0">
+			<div id="row" class="row space-y-4 sm-gap-y-4">
+				<Header />
+				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+				<div id="article" class="row space-y-4 sm-gap-y-4 text-text">
+					<h1 class="title text-xl font-bold">{title}</h1>
+					{pubDate && <time>Published on {pubDate}</time>}
+					{
+						updatedDate && (
+							<div>
+								Last updated on <time>{updatedDate}</time>
+							</div>
+						)
+					}
+					<div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+					<div id="article-text prose prose-invert">
+						<slot />
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
