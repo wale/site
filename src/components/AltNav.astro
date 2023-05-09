@@ -1,0 +1,38 @@
+---
+import HeaderLink from "./HeaderLink.astro"
+import ResponsiveIcon from "./ResponsiveIcon.astro";
+
+interface Props {
+  current: string;
+}
+
+
+const links = ["/blog", "/about"];
+const { current } = Astro.props;
+---
+
+<nav class="p-5 flex flex-col gap-4">
+    <div class="flex flex-row justify-center">
+        <ResponsiveIcon class="h-[32px] md:h-[46px]" />
+    </div>
+    <ul class="flex flex-row justify-center text-lg font-light gap-4">
+      <li>
+        <HeaderLink href="/">Home</HeaderLink>
+      </li>
+  
+      {
+        links.map((l) => (
+          <li>
+            <HeaderLink class:list={[{ current: l === current }]} href={l}>
+              {l.slice(1).charAt(0).toUpperCase() + l.slice(2)}
+            </HeaderLink>
+          </li>
+        ))
+      }
+    </ul>
+</nav>
+<style lang="scss">
+.current {
+    @apply text-subtext0 underline underline-offset-8;
+}
+</style>

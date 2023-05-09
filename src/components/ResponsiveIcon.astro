@@ -1,7 +1,11 @@
+---
+const { class: className, ...props } = Astro.props;
+---
+
 <picture>
     <source
         srcset="/icon_expanded.svg"
         media="(min-width: 800px)"
     />
-    <img class="object-cover h-[80px] md:h-[64px]" src="/icon.svg" alt="Wale's icon" />
+    <img class:list={[className]} src="/icon.svg" alt="Wale's icon" />
 </picture>
