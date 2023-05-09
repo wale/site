@@ -18,7 +18,7 @@
     "@fontsource/inter": "^4.5.15",
     "@fontsource/iosevka": "^4.5.4",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.0.4",
+    "astro": "^2.4.3",
     "date-fns": "^2.29.3",
     "date-fns-tz": "^2.0.0",
     "rehype-autolink-headings": "^6.1.1",
@@ -29,6 +29,8 @@
     "twemoji": "^14.0.2"
   },
   "devDependencies": {
-    "@catppuccin/tailwindcss": "^0.1.1"
+    "@catppuccin/tailwindcss": "^0.1.1",
+    "@iconify-icons/simple-icons": "^1.2.51",
+    "astro-iconify": "^1.2.0"
   }
 }

@@ -2,25 +2,32 @@
 import HeaderLink from './HeaderLink.astro';
 import ResponsiveIcon from './ResponsiveIcon.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+import {Icon} from "astro-iconify"
 ---
 
 <header class="text-text text-xl">
-	<div class="row space-y-0.5">
+	<div class="row space-y-2">
 		<ResponsiveIcon />
-		<h2 class="font-semibold">
+		<h2 class="font-bold text-3xl">
 			{SITE_TITLE}
 		</h2>
-		<p class="font-semibold">
+		<p class="font-light">
 			{SITE_DESCRIPTION}
 		</p>
-		<nav class="font-regular text-sm">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="mail&#116;&#111;&#58;m&#101;&#64;%77a&#37;6Ce&#46;a&#117;">E-Mail</HeaderLink>
-			<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank">Twitter</HeaderLink>
-			<HeaderLink href="https://github.com/wale" target="_blank">GitHub</HeaderLink>
-			<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me">Mastodon</HeaderLink>
+		<nav class="font-light text-sm">
+			<div class="flex flex-row divide-x">
+				<div class="flex flex-row gap-2 px-2 first:pl-0 last:pr-0">
+					<HeaderLink href="/">Home</HeaderLink>
+					<HeaderLink href="/blog">Blog</HeaderLink>
+					<HeaderLink href="/about">About</HeaderLink>
+				</div>
+				<div class="flex flex-row gap-2 px-2 first:pl-0 last:pr-0">
+					<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank"><Icon name="simple-icons:twitter" height="20"/></HeaderLink>
+					<HeaderLink href="https://github.com/wale" target="_blank"><Icon name="simple-icons:github" height="20"/></HeaderLink>
+					<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me"><Icon name="simple-icons:mastodon" height="20"/></HeaderLink>
+				</div>
+			</div>
 		</nav>
 	</div>
 </header>
