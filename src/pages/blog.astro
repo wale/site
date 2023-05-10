@@ -26,14 +26,19 @@ const fmt = (d: Date) => format(d, "PPPP", { timeZone: "Australia/Melbourne" });
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image="/seo.png" />
 	</head>
-	<body class="flex flex-col bg-base flex-grow text-text text-xl w-screen gap-2">
-		<div>
-			<AltNav current={navCurrent} />
-			<main class="flex flex-col max-w-3xl p-4 gap-4 sm:m-auto sm:mt-5 sm:p-0 w-full">
+	<body class="flex flex-col bg-base flex-grow text-text text-xl w-full h-screen gap-2">
+		<AltNav current={navCurrent} />
+		<section class="flex flex-col flex-1 max-w-3xl p-4 gap-4 sm:m-auto sm:mt-5 sm:p-0 w-full">
+			<header class="flex flex-col gap-3">
 				<h1 class="font-extrabold text-3xl">Posts</h1>
-				<p class="font-regular italic text-[18px]">Here are some posts that I tend to write occasionally. This blog mostly contains ramblings about tech, otherwise it is whatever I tend to feel like writing.</p>
+				<p class="font-regular italic text-[18px]">
+					Here are some posts that I tend to write occasionally. 
+					This blog mostly contains ramblings about tech, otherwise it is whatever I tend to feel like writing.
+				</p>
 				<a href="/rss.xml" class="flex items-center gap-2 text-sm">RSS Feed <Icon name="simple-icons:rss" height="16" /></a>
-				<div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+			</header>
+			<div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+			<main>
 				<div class="grid gap-4">
 					{
 						posts.map(({url, frontmatter}) => (
@@ -49,7 +54,8 @@ const fmt = (d: Date) => format(d, "PPPP", { timeZone: "Australia/Melbourne" });
 					}
 				</div>
 			</main>
-		</div>
+		</section>
+		<Footer />
 	</body>
 </html>
 <style lang="scss">

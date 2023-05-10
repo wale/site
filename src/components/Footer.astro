@@ -1,7 +1,28 @@
-<footer>
-	<div class="info">
-		<p>Made with ❤️ with {Astro.generator}.</p>
-		<p>Posts are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">CC-BY-NC-SA 4.0 International</a>.</p>
-		<p><a href="https://github.com/wale/site">Source</a></p>
-	</div>
+---
+import HeaderLink from "./HeaderLink.astro";
+
+import {Icon} from "astro-iconify"
+import ResponsiveIcon from "./ResponsiveIcon.astro";
+---
+<footer class="flex flex-col gap-4 md:gap-2 items-center justify-center self-center m-2 md:m-5 md:p-5 p-2.5 relative w-11/12 md:h-[60px] bottom-2 text-text bg-overlay0 rounded-lg">
+	<a href="/" class="pl-4 pt-4 md:pt-0 md:absolute md:left-5">
+		<ResponsiveIcon class="max-h-[32px]" />
+	</a>
+	<ul class="flex flex-row text-lg font-light gap-4 pl-2 md:pl-0">
+		<li>
+			<HeaderLink href="https://github.com/wale/"><Icon name="simple-icons:github" height="24"/></HeaderLink>
+		</li>
+		<li>
+			<HeaderLink href="https://twitter.com/spellsaidwrong/"><Icon name="simple-icons:twitter" height="24"/></HeaderLink>
+		</li>
+		<li>
+			<HeaderLink href="https://merveilles.town/@wale"><Icon name="simple-icons:mastodon" height="24"/></HeaderLink>
+		</li>
+		<li>
+			<HeaderLink href="https://unsplash.com/@spellsaidwrong"><Icon name="simple-icons:unsplash" height="24" /></HeaderLink>
+		</li>
+		<li>
+			<HeaderLink href="https://instagram.com/spellsaidwrong"><Icon name="simple-icons:instagram" height="24" /></HeaderLink>
+		</li>
+	</ul>
 </footer>
