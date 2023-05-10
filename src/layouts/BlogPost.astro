@@ -6,22 +6,25 @@ import ResponsiveIcon from '../components/ResponsiveIcon.astro';
 
 import {format} from "date-fns-tz";
 import {parseISO} from "date-fns";
+import AltNav from '../components/AltNav.astro';
 
 export interface Props {
 	content: {
 		title: string;
 		description: string;
 		pubDate: string;
+		navCurrent?: string
 		updatedDate?: string;
 		heroImage?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate: _pubDate, updatedDate: _updatedDate, heroImage },
+	content: { title, description, pubDate: _pubDate, updatedDate: _updatedDate, heroImage, navCurrent: _navCurrent },
 } = Astro.props;
 
-console.log(_pubDate);
+const navCurrent = _navCurrent ? _navCurrent : "/blog";
+
 
 // Formatted ISO 8601 dates, which are only passed through to the frontend
 // I want to show both local system date, along with the dates in my local
@@ -50,44 +53,55 @@ const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 			image={heroImage}
 			pubDate={_pubDate}
 			modDate={_updatedDate} 
-			/>
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		
-			article {
-				display: flex;
-				flex-direction: column;
-				margin-top: 0px;
-				margin-bottom: 0px;
+		/>
+		<style is:global>
+			@media screen and (min-width: 600px) {
+				code {
+					counter-reset: step;
+					counter-increment: step 0;
+				}
+
+				code .line::before {
+					content: counter(step);
+					counter-increment: step;
+					width: 1rem;
+					margin-right: 1.5rem;
+					display: inline-block;
+					text-align: right;
+					color: rgb(166, 173, 200);
+				}
 			}
 		</style>
 	</head>
-
-	<body>
-		<Header />
-		<main>
-			{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-			<article>
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>Published on {pubDate}</time>}
+	<body class="flex flex-col bg-base flex-grow text-text w-screen gap-2">
+		<AltNav current={navCurrent} />
+		<section class="max-w-3xl self-center items-center justify-center p-2.5 sm:m-auto sm:mt-5 sm:p-0">
+			<header class="mb-5 flex flex-col gap-4">
 				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
+					heroImage && (
+						<img src={heroImage} class="object-cover rounded-md" />
+					)
+				}
+				<h1 class="text-4xl font-bold">{title}</h1>
+				{
+					description && (
+						<h3 class="text-lg font-light">{description}</h3>
+					)
+				}
+				{
+					(pubDate || updatedDate) && (
+						<div class="flex flex-col gap-1 text-sm font-light italic">
+							{pubDate && <span>{pubDate}</span>}
+							{updatedDate && <span>Last updated {updatedDate}</span>}
 						</div>
 					)
 				}
-				<hr />
+			</header>
+			<div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+			<main class="article-content prose prose-invert pt-4 max-w-none prose-headings:mt-0 prose-headings:mb-0 prose-headings:pb-2">
 				<slot />
-			</article>
-		</main>
+			</main>
+		</section>
 		<Footer />
 	</body>
 </html>

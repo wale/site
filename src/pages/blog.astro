@@ -3,58 +3,63 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import AltNav from '../components/AltNav.astro';
+
+import {format} from "date-fns-tz";
+import {parseISO} from "date-fns";
+
+import {Icon} from "astro-iconify"
+
 
 // Use Astro.glob() to fetch all posts, and then sort them by published date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
+
+const navCurrent = "/blog";
+
+const fmt = (d: Date) => format(d, "PPPP", { timeZone: "Australia/Melbourne" });
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image="/seo.png" />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li time {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #908caa;
-			}
-		</style>
 	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
+	<body class="flex flex-col bg-base flex-grow text-text text-xl w-full h-screen gap-2">
+		<AltNav current={navCurrent} />
+		<section class="flex flex-col flex-1 max-w-4xl p-4 gap-4 sm:m-auto sm:mt-5 sm:p-0 w-full">
+			<header class="flex flex-col gap-3">
+				<h1 class="font-extrabold text-3xl">Posts</h1>
+				<p class="font-regular italic text-[18px]">
+					Here are some posts that I tend to write occasionally. 
+					This blog mostly contains ramblings about tech, otherwise it is whatever I tend to feel like writing.
+				</p>
+				<a href="/rss.xml" class="flex items-center gap-2 text-sm">RSS Feed <Icon name="simple-icons:rss" height="16" /></a>
+			</header>
+			<div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+			<main>
+				<div class="grid gap-4">
 					{
-						// TODO: show updated date in post
-						posts.map((post) => (
-							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
-								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
-							</li>
+						posts.map(({url, frontmatter}) => (
+							<article class="post">
+								<a class="flex flex-col gap-2 p-5" href={url}>
+									<h2 class="text-2xl font-bold">{frontmatter.title}</h2>
+									<div class="flex-row">
+										<time class="font-light text-lg gap-2 px-2 first:pl-0 last:pr-0">{fmt(parseISO(frontmatter.pubDate))}</time>
+									</div>
+								</a>
+							</article>
 						))
 					}
-				</ul>
-			</section>
-		</main>
+				</div>
+			</main>
+		</section>
 		<Footer />
 	</body>
 </html>
+<style lang="scss">
+	.post {
+		@apply rounded-lg text-text bg-surface0;
+	}
+</style>

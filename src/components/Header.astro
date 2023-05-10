@@ -2,38 +2,34 @@
 import HeaderLink from './HeaderLink.astro';
 import ResponsiveIcon from './ResponsiveIcon.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+import {Icon} from "astro-iconify"
 ---
 
-<header>
-	<ResponsiveIcon />
-	<div class="info">
-		<h2>
+<header class="text-text text-xl">
+	<div class="row space-y-2">
+		<ResponsiveIcon />
+		<h2 class="font-bold text-3xl">
 			{SITE_TITLE}
 		</h2>
-		<p>
+		<p class="font-light">
 			{SITE_DESCRIPTION}
 		</p>
+		<nav class="font-light text-sm">
+			<div class="flex flex-row divide-x">
+				<div class="flex flex-row gap-2 px-2 first:pl-0 last:pr-0">
+					<HeaderLink href="/">Home</HeaderLink>
+					<HeaderLink href="/blog">Blog</HeaderLink>
+					<HeaderLink href="/about">About</HeaderLink>
+				</div>
+				<div class="flex flex-row gap-2 px-2 first:pl-0 last:pr-0">
+					<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank"><Icon name="simple-icons:twitter" height="20"/></HeaderLink>
+					<HeaderLink href="https://github.com/wale" target="_blank"><Icon name="simple-icons:github" height="20"/></HeaderLink>
+					<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me"><Icon name="simple-icons:mastodon" height="20"/></HeaderLink>
+					<HeaderLink href="https://instagram.com/spellsaidwrong"><Icon name="simple-icons:instagram" height="20" /></HeaderLink>
+					<HeaderLink href="https://unsplash.com/@spellsaidwrong"><Icon name="simple-icons:unsplash" height="20" /></HeaderLink>
+				</div>
+			</div>
+		</nav>
 	</div>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="mail&#116;&#111;&#58;m&#101;&#64;%77a&#37;6Ce&#46;a&#117;">E-Mail</HeaderLink>
-		<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/wale" target="_blank">GitHub</HeaderLink>
-		<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me">Mastodon</HeaderLink>
-	</nav>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2, p {
-		margin: 0.5em 0;
-	}
-	nav {
-		display: flex;
-		flex-direction: row;
-		gap: 5px;
-	}
-</style>
