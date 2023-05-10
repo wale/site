@@ -54,12 +54,28 @@ const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 			pubDate={_pubDate}
 			modDate={_updatedDate} 
 		/>
-	</head>
+		<style is:global>
+			@media screen and (min-width: 600px) {
+				code {
+					counter-reset: step;
+					counter-increment: step 0;
+				}
 
+				code .line::before {
+					content: counter(step);
+					counter-increment: step;
+					width: 1rem;
+					margin-right: 1.5rem;
+					display: inline-block;
+					text-align: right;
+					color: rgb(166, 173, 200);
+				}
+			}
+		</style>
+	</head>
 	<body class="flex flex-col bg-base flex-grow text-text w-screen gap-2">
 		<AltNav current={navCurrent} />
 		<section class="max-w-3xl self-center items-center justify-center p-2.5 sm:m-auto sm:mt-5 sm:p-0">
-			
 			<header class="mb-5 flex flex-col gap-4">
 				{
 					heroImage && (
@@ -89,6 +105,3 @@ const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 		<Footer />
 	</body>
 </html>
-<style lang="sass">
-
-</style>
