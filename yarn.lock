@@ -528,6 +528,13 @@
   resolved "https://registry.yarnpkg.com/@fontsource/iosevka/-/iosevka-4.5.4.tgz#21ccaf84c958037d79b9728ebd7d7929457e2e99"
   integrity sha512-S3rNmYP8EvjeyAJ8mwtt+9CZK8p5LdxYXpgv9lSBtHbRkwjcg8MbPs7vzWLRYs0R0MRmpvlLw864xvn3XKXclA==
 
+"@iconify-icons/gg@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/gg/-/gg-1.2.3.tgz#e0062c01561d582f24b2a3d5a947795908ddb239"
+  integrity sha512-LlaNputZrVXPMRk9eTtd4uDtDpaIJju94dMM6EYi8cYJCWsZIw0gWwWHSLqhqSQyfl+MKLeXr6asR0UnsZVwGA==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify-icons/simple-icons@^1.2.51":
   version "1.2.51"
   resolved "https://registry.yarnpkg.com/@iconify-icons/simple-icons/-/simple-icons-1.2.51.tgz#999026b9bf6e565f16faa9c2cc08db3a2f3e508d"
