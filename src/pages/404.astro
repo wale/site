@@ -1,8 +1,12 @@
 ---
-import Header from "../components/Header.astro";
+import AltNav from "../components/AltNav.astro";
 import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
 
-import { SITE_TITLE } from "../config";
+import {SITE_TITLE} from "../config"
+
+
+const navCurrent = "/404";
 ---
 <!DOCTYPE html>
 <html>
@@ -10,12 +14,19 @@ import { SITE_TITLE } from "../config";
         <BaseHead title={SITE_TITLE} description="Page not found." />
     </head>
     <body>
-        <Header title={SITE_TITLE} />
-        <main>
-            <h1>😢 Sorry!</h1>
-            <h4>You got 404'd.</h4>
-            <p>I don't think this is what you're looking for.</p>
-            <p>The page you're looking for may have been moved, or never existed at all.</p>
-        </main>
-    </body>
+        <body class="flex flex-col bg-base flex-grow text-text text-xl w-full h-screen gap-2">
+            <AltNav current={navCurrent} />
+            <section class="flex flex-col flex-1 max-w-2xl p-4 gap-4 m-auto sm:mt-5 sm:p-0 w-full">
+                <header class="flex flex-col gap-3">
+                    <h1 class="text-4xl font-extrabold">You got 404'd.</h1>
+                </header>
+                <div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
+                <main class="flex flex-col gap-2">
+                    <h2 class="text-xl font-normal italic">I'm afraid <code>{Astro.url}</code> does not exist.</h2>
+                    <p class="text-lg font-light">Please have a cat for your troubles.</p>
+                    <img class="max-w-none rounded-md" src="https://cataas.com/cat">
+                </main>
+            </section>
+            <Footer />
+        </body>
 </html>
