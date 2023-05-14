@@ -22,7 +22,7 @@ const navCurrent = "/404";
                 </header>
                 <div class="h-2 bg-gradient-to-r from-red via-blue to-yellow"></div>
                 <main class="flex flex-col gap-2">
-                    <h2 class="text-xl font-normal italic">I'm afraid <code>{Astro.url}</code> does not exist.</h2>
+                    <h2 class="text-xl font-normal italic">I'm afraid <code>{Astro.request.url}</code> does not exist.</h2>
                     <p class="text-lg font-light">Please have a cat for your troubles.</p>
                     <img class="max-w-none rounded-md" src="https://cataas.com/cat">
                 </main>
