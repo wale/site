@@ -12,7 +12,7 @@ export interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate: string;
+		pubDate?: string;
 		navCurrent?: string
 		updatedDate?: string;
 		heroImage?: string;
@@ -37,7 +37,7 @@ const navCurrent = _navCurrent ? _navCurrent : "/blog";
 // I have, for reasons.
 const fmt = (d: Date) => format(d, "PPPP, h:mm aa OO", { timeZone: "Australia/Melbourne" });
 
-const pubDate = fmt(parseISO(_pubDate));
+const pubDate = _pubDate ? fmt(parseISO(_pubDate)) : null;
 const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
 ---
 
