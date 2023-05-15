@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/BlogPost.astro"
 title: "What I'm doing now"
-updatedDate: "2023-05-15T22:00:00+10:00"
+updatedDate: "2023-05-15T22:20:00+10:00"
 navCurrent: /now
 ---
 
