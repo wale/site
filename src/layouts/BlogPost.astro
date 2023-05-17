@@ -4,9 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ResponsiveIcon from '../components/ResponsiveIcon.astro';
 
-import {format} from "date-fns-tz";
+import {format, utcToZonedTime} from "date-fns-tz";
 import {parseISO} from "date-fns";
 import AltNav from '../components/AltNav.astro';
+import da from 'date-fns/locale/da';
 
 export interface Props {
 	content: {
@@ -35,7 +36,8 @@ const navCurrent = _navCurrent ? _navCurrent : "/blog";
 // The formats I'm passing through explicitly show the timezone I'm working in (AEST/AEDT),
 // as a stand-in for the zero client side JS (besides analytics) requirement
 // I have, for reasons.
-const fmt = (d: Date) => format(d, "PPPP, hh:mm aa OO", { timeZone: "Australia/Melbourne" });
+const fmt = (d: Date, tz: string = "Australia/Melbourne") => 
+	format(utcToZonedTime(d, tz), "PPPP, h:mm aa OO", { timeZone: tz })
 
 const pubDate = _pubDate ? fmt(parseISO(_pubDate)) : null;
 const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
