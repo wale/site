@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ResponsiveIcon from '../components/ResponsiveIcon.astro';
 
-import {format, utcToZonedTime} from "date-fns-tz";
+import {formatInTimeZone} from "date-fns-tz";
 import {parseISO} from "date-fns";
 import AltNav from '../components/AltNav.astro';
 import da from 'date-fns/locale/da';
@@ -37,7 +37,7 @@ const navCurrent = _navCurrent ? _navCurrent : "/blog";
 // as a stand-in for the zero client side JS (besides analytics) requirement
 // I have, for reasons.
 const fmt = (d: Date, tz: string = "Australia/Melbourne") => 
-	format(utcToZonedTime(d, tz), "PPPP, h:mm aa OO", { timeZone: tz })
+	formatInTimeZone(d, tz, "PPPP, h:mm aa OO")
 
 const pubDate = _pubDate ? fmt(parseISO(_pubDate)) : null;
 const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
