@@ -35,7 +35,7 @@ const navCurrent = _navCurrent ? _navCurrent : "/blog";
 // The formats I'm passing through explicitly show the timezone I'm working in (AEST/AEDT),
 // as a stand-in for the zero client side JS (besides analytics) requirement
 // I have, for reasons.
-const fmt = (d: Date) => format(d, "PPPP, h:mm aa OO", { timeZone: "Australia/Melbourne" });
+const fmt = (d: Date) => format(d, "PPPP, hh:mm aa OO", { timeZone: "Australia/Melbourne" });
 
 const pubDate = _pubDate ? fmt(parseISO(_pubDate)) : null;
 const updatedDate = _updatedDate ? fmt(parseISO(_updatedDate)) : null;
