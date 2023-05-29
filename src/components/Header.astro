@@ -23,11 +23,21 @@ import {Icon} from "astro-iconify"
 					<HeaderLink href="/about">About</HeaderLink>
 				</div>
 				<div class="flex flex-row gap-4 px-4 first:pl-0 last:pr-0">
-					<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank"><Icon name="simple-icons:twitter" height="20"/></HeaderLink>
-					<HeaderLink href="https://github.com/wale" target="_blank"><Icon name="simple-icons:github" height="20"/></HeaderLink>
-					<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me"><Icon name="simple-icons:mastodon" height="20"/></HeaderLink>
-					<HeaderLink href="https://instagram.com/spellsaidwrong"><Icon name="simple-icons:instagram" height="20" /></HeaderLink>
-					<HeaderLink href="https://unsplash.com/@spellsaidwrong"><Icon name="simple-icons:unsplash" height="20" /></HeaderLink>
+					<HeaderLink href="https://twitter.com/spellsaidwrong" target="_blank">
+						<Icon name="simple-icons:twitter" height="20" aria-label="Twitter"/>
+					</HeaderLink>
+					<HeaderLink href="https://github.com/wale" target="_blank">
+						<Icon name="simple-icons:github" height="20" aria-label="Github"/>
+					</HeaderLink>
+					<HeaderLink href="https://merveilles.town/@wale" target="_blank" rel="me">
+						<Icon name="simple-icons:mastodon" height="20" aria-label="Mastodon" />
+					</HeaderLink>
+					<HeaderLink href="https://instagram.com/spellsaidwrong" target="_blank">
+						<Icon name="simple-icons:instagram" height="20" aria-label="Instagram" />
+					</HeaderLink>
+					<HeaderLink href="https://unsplash.com/@spellsaidwrong" target="_blank">
+						<Icon name="simple-icons:unsplash" height="20" aria-label="Unsplash"/>
+					</HeaderLink>
 				</div>
 			</div>
 		</nav>
