@@ -6,6 +6,8 @@ import tailwind from "@astrojs/tailwind";
 
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkTwemoji from "remark-twemoji";
+import remarkFigureCaption from '@microflash/remark-figure-caption';
+
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
@@ -16,8 +18,14 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     extendDefaultPlugins: true,
-    remarkPlugins: [remarkUnwrapImages, remarkTwemoji],
-    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+    remarkPlugins: [remarkUnwrapImages, remarkTwemoji, remarkFigureCaption],
+    rehypePlugins: [
+      rehypeSlug, 
+      [
+        rehypeAutolinkHeadings,
+        { behavior: "append", content: { type: "text", value: "#" } }
+      ]
+    ],
     syntaxHighlight: "shiki",
     shikiConfig: {
       theme: mochaTheme,
