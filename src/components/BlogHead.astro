@@ -7,6 +7,8 @@
 import "@fontsource/inter/variable-full.css";
 import "@fontsource/iosevka";
 
+import { zonedTimeToUtc } from 'date-fns-tz'
+
 export interface Props {
 	title: string;
 	description: string;
@@ -47,11 +49,15 @@ import Plausible from './Plausible.astro';
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
-<meta property="article:published_time" content={pubDate} />
 <meta property="article:author" content="https://wale.au/about">
+{
+    pubDate && (
+        <meta property="article:published_time" content={zonedTimeToUtc(pubDate, 'Australia/Melbourne').toISOString()} />
+    )
+}
 { 
     modDate && (
-        <meta property="article:modified_time" content={modDate} />
+        <meta property="article:modified_time" content={zonedTimeToUtc(modDate, 'Australia/Melbourne').toISOString()} />
     )
 }
 
