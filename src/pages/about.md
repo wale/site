@@ -12,7 +12,7 @@ I'm Duale Siad, pronounced like "doo-AR-lee SEE-ad" /duɐːliː siːæd/, otherw
 
 I mainly dabble in open source work using the programming languages **Kotlin** and **Java**, as well as **TypeScript**, **JavaScript** and **Python**.
 
-I am currently a student at [Swinburne University](https://swinburne.edu.au), where I commence the [Bachelor's Degree in Information, Communication and Technology](https://www.swinburne.edu.au/study/course/bachelor-of-information-and-communication-technology/) course in 2023.
+I am currently a student at [Swinburne University](https://swinburne.edu.au), where I complete the [Bachelor's Degree in Information, Communication and Technology](https://www.swinburne.edu.au/study/course/bachelor-of-information-and-communication-technology/) course in mid-to-late 2025.
 
 Important information about me will be signed using a cryptographic key, which has not been announced on this page as of yet.
 
