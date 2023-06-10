@@ -52,7 +52,7 @@ import Plausible from './Plausible.astro';
 <meta property="article:author" content="https://wale.au/about">
 {
     pubDate && (
-        <meta property="article:published_time" content={zonedTimeToUtc(pubDate, 'Australia/Melbourne').toISOString()} />
+        <meta property="article:published_time" content={zonedTimeToUtc(pubDate, 'Australia/Melbourne').toUTCString()} />
     )
 }
 { 
