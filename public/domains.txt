@@ -1,6 +1,7 @@
 # All root domains owned at a registry level by Duale Siad (wale.au)
 # Domains that redirect to domains that are not in this list may not be in complete control.
-# Last updated: 2022-11-15T11:42:39.377Z
+
+# Last updated: 2023-08-22T13:42:49.150Z
 
 # You are here.
 wale.au
@@ -9,11 +10,20 @@ wale.id.au
 # Internal infrastructure, currently mostly vacant.
 wale.run
 
-# Data science project.
-mapping.melbourne
-
-# Public SearxNG instance.
-searxng.au
-
-# Unused
+# Joke domains
+nice-cock.agency
 banan.network
+
+# Former blog domain, no longer used.
+wale.blog
+
+# Proposed Mastodon instance, never used.
+nori.town
+ssw.social
+
+# Proposed programming language, currently dormant, but have plans to use.
+contre.dev
+
+# No longer owned
+searxng.au
+mapping.melbourne
