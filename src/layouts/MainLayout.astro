@@ -1,0 +1,21 @@
+---
+import "@wale/general-sans";
+
+import "~/styles/global.css";
+
+import Head from "~/components/HeadEl.astro";
+
+interface Props {
+    description?: string;
+    title: string;
+    ogTitle?: string;
+}
+const { description, title, ogTitle } = Astro.props;
+---
+<!doctype html>
+<html>
+    <Head title={title} description={description ?? "Duale Siad"} />
+    <body class="flex flex-col flex-grow bg-grayscale-300 md:text-2xl text-grayscale-950 text-xl h-screen">
+        <slot />
+    </body>
+</html>
