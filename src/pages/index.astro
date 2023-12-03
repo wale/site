@@ -4,13 +4,16 @@ import Layout from "~/layouts/MainLayout.astro";
 import Hero from "~/components/Hero.astro";
 import Logo from "~/components/Logo.astro";
 import Icon from "~/components/BrandedIcon.astro";
+
+import { SITE_NAME, SITE_DESCRIPTION } from "~/config";
+
 ---
 
-<Layout title="Duale Siad" description="Creative programmer and photographer.">
+<Layout title={SITE_NAME} description={SITE_DESCRIPTION}>
     <Hero>
         <Logo />     
-        <h1 class="text-5xl font-black">Duale Siad</h1>
-        <h3 class="text-2xl font-regular">Fullstack programmer, hobbyist photographer.</h3>
+        <h1 class="text-5xl font-black">{SITE_NAME}</h1>
+        <h3 class="text-2xl font-regular">{SITE_DESCRIPTION}<h3>
         <div class="flex flex-row gap-4">
             <Icon icon="simple-icons:git" url="https://git.wale.au/wale" height="24" />
             <Icon icon="simple-icons:github" url="https://github.com/wale" height="24" />
