@@ -17,6 +17,12 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.2
     version: 5.0.2(astro@3.6.4)(tailwindcss@3.3.5)
+  '@iconify-icons/gg':
+    specifier: ^1.2.4
+    version: 1.2.4
+  '@iconify-icons/simple-icons':
+    specifier: ^1.2.74
+    version: 1.2.74
   '@wale/general-sans':
     specifier: ^1.0.0
     version: 1.0.0
@@ -859,6 +865,18 @@ packages:
     dev: false
     optional: true
 
+  /@iconify-icons/gg@1.2.4:
+    resolution: {integrity: sha512-ZHvDSmuHRl9BOTNzSKKqbcldEkXQZPcCKAtlJhEp+/9ddfWyPP/QofGjzvgBKHFLRG08xjelZnzNFsU6gbagcw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-icons/simple-icons@1.2.74:
+    resolution: {integrity: sha512-FWmuSbg+KDUreysuaE8DYu/jbv4+FtSY+ppAi8w8sgX9CKTP6watB+PLeMbklOL/G5PnBlHnvM/ihkZ+n96OZw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/tools@3.0.7:
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
     dependencies:
@@ -878,7 +896,6 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils@2.1.12:
     resolution: {integrity: sha512-7vf3Uk6H7TKX4QMs2gbg5KR1X9J0NJzKSRNWhMZ+PWN92l0t6Q3tj2ZxLDG07rC3ppWBtTtA4FPmkQphuEmdsg==}
