@@ -12,15 +12,15 @@ import { SITE_NAME, SITE_DESCRIPTION } from "~/config";
     <Hero>
         <Logo />     
         <h1 class="text-5xl font-black">{SITE_NAME}</h1>
-        <h3 class="text-2xl font-regular">{SITE_DESCRIPTION}<h3>
-        <div class="flex flex-row gap-4 divide-x">
+        <h3 class="text-2xl font-regular">{SITE_DESCRIPTION}</h3>
+        <div class="flex flex-col md:flex-row gap-4">
             <div class="flex flex-row gap-4 first:pl-0 last:pr-0">
                 <Icon icon="simple-icons:git" url="https://git.wale.au/wale" height="24" />
                 <Icon icon="simple-icons:github" url="https://github.com/wale" height="24" />
                 <Icon icon="simple-icons:instagram" url="https://instagram.com/spellsaidwrong" height="24" />
                 <Icon icon="simple-icons:mastodon" url="https://merveilles.town/wale" height="24" rel="me" />  
             </div>
-            <div class="flex flex-row gap-4 px-4 first:pl-0 last:pr-0">
+            <div class="flex flex-row gap-4 first:pl-0 last:pr-0">
                 <a href="/blog" class="link">Blog</a>
                 <a href="/about" class="link">About</a>
                 <a href="/contact" class="link">Contact</a>
@@ -30,6 +30,6 @@ import { SITE_NAME, SITE_DESCRIPTION } from "~/config";
 </Layout>
 <style lang="scss">
     .link {
-        @apply font-light hover:underline;
+        @apply font-light hover:underline hover:underline-offset-8;
     }
 </style>
