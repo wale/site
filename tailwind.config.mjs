@@ -14,6 +14,9 @@ export default {
 						fontVariationSettings: "'wght'"
 					},
 					...defaultTheme.fontFamily.sans
+				],
+				mono: [
+					"Iosevka", ...defaultTheme.fontFamily.mono
 				]
 			}
 		},

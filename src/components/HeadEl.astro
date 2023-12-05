@@ -1,11 +1,13 @@
 ---
 import { SEO } from "astro-seo";
+import { SITE_NAME } from "~/config";
 
 interface Props {
     title: string;
     description: string;
+    image?: string | undefined;
 }
-const {title, description} = Astro.props;
+const {title, description, image} = Astro.props;
 ---
 <head>
     <meta charset="utf-8">  
@@ -18,7 +20,11 @@ const {title, description} = Astro.props;
             basic: {
                 title: `${title}`,
                 type: "website",
-                image: "/icon.svg",
+                image: (image ?? "/icon.svg"),
+            },
+            optional: {
+                description: description,
+                siteName: SITE_NAME
             }
         }}
         twitter={{

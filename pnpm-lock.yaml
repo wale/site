@@ -37,6 +37,9 @@ dependencies:
     version: 5.3.2
 
 devDependencies:
+  '@fontsource/iosevka':
+    specifier: ^5.0.7
+    version: 5.0.7
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.6)
@@ -866,6 +869,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/iosevka@5.0.7:
+    resolution: {integrity: sha512-X8s5hob/XEMPgY6JsgIwVRYsBMOxeSWlSXAWqZWeFcSF/ZyUsq/ut2fqgOlhUweBqS/ttiPBwJLXl7EPJsWqEg==}
+    dev: true
 
   /@iconify-icons/gg@1.2.4:
     resolution: {integrity: sha512-ZHvDSmuHRl9BOTNzSKKqbcldEkXQZPcCKAtlJhEp+/9ddfWyPP/QofGjzvgBKHFLRG08xjelZnzNFsU6gbagcw==}
