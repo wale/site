@@ -7,8 +7,8 @@ const { class: className, ...props } = Astro.props;
 
 <picture>
     <source
-        srcset={iconFull.src}
+        srcset={(iconFull as unknown as ImageMetadata).src}
         media="(min-width: 800px)"
     />
-    <img class:list={[className]} src={icon.src} alt="Wale's icon" />
+    <img class:list={[className]} src={(icon as unknown as ImageMetadata).src} alt="Wale's icon" />
 </picture>
