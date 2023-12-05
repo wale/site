@@ -18,7 +18,7 @@
     "@iconify-icons/simple-icons": "^1.2.74",
     "@wale/general-sans": "^1.0.0",
     "astro": "^3.6.4",
-    "tailwindcss": "^3.0.24",
+    "tailwindcss": "^3.3.6",
     "typescript": "^5.3.2"
   },
   "devDependencies": {
