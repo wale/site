@@ -1,0 +1,66 @@
+---
+import Layout from "~/layouts/MainLayout.astro";
+import Nav from "~/components/Nav.astro";
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection("blog");
+
+    return blogEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+    <Nav />
+    <section class="pl-10 pb-10 pt-5 pr-5 max-w-[1000px] w-full self-center">
+        <header class="flex flex-col gap-3">
+            <h1 class="text-4xl font-black">{entry.data.title}</div>
+            <div class="text-2xl font-medium">{entry.data.description}</div>
+            {
+                (entry.data.published || entry.data.updated) && (
+                    <div class="flex flex-col gap-1 text-sm font-light">
+                        {entry.data.published && <span>Published at {entry.data.published}</span>}
+                        {entry.data.updated && <span>Updated at {entry.data.updated}</span>}
+                    </div>
+                )
+            }
+            <div class="flex flex-row gap-2">
+                {
+                    entry.data.tags.map((tag) => (
+                        <div class="rounded-full py-1 px-3 border-[1px] border-grayscale-700 font-regular text-sm">{tag}</div>
+                    ))
+                }
+            </div>
+        </header>
+        <main class="article-content prose">
+            <hr />
+            <Content />
+        </main>
+    </section>
+</Layout>
+
+<style is:global lang="scss">
+  .article-content {
+    @apply max-w-none not-italic;
+    @apply prose-headings:relative;
+    @apply pr-8;
+
+    > * {
+        @apply text-grayscale-950;
+    }
+
+    :is(a, strong, code) {
+        @apply text-grayscale-950;
+    }
+
+    a {
+        @apply font-light italic no-underline hover:underline hover:underline-offset-4;
+    }
+  }
+</style>
