@@ -17,6 +17,9 @@ export default {
 				],
 				mono: [
 					"Iosevka", ...defaultTheme.fontFamily.mono
+				],
+				ipa: [
+					"Voces"
 				]
 			}
 		},

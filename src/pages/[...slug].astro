@@ -5,7 +5,7 @@ import Nav from "~/components/Nav.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-    const blogEntries = await getCollection("blog");
+    const blogEntries = await getCollection("info");
 
     return blogEntries.map(entry => ({
         params: { slug: entry.slug }, props: { entry },
@@ -30,13 +30,6 @@ const { Content } = await entry.render();
                     </div>
                 )
             }
-            <div class="flex flex-row gap-2">
-                {
-                    entry.data.tags.map((tag) => (
-                        <div class="rounded-full py-1 px-3 border-[1px] border-grayscale-700 font-regular text-sm">{tag}</div>
-                    ))
-                }
-            </div>
         </header>
         <main class="article-content prose">
             <hr />

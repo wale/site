@@ -12,6 +12,18 @@ const blogCollection = defineCollection({
     }),
 });
 
+const infoCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        published: z.date(),
+        updated: z.date().optional(),
+        preamble: z.string().optional()
+    })
+})
+
 export const collections = {
     "blog": blogCollection,
+    "info": infoCollection,
 };

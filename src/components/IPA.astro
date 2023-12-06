@@ -1,0 +1,18 @@
+---
+export interface Props {
+    transcription: "broad" | "narrow";
+    characters: string;
+    phonetic?: string;
+}
+
+const { transcription, characters, phonetic } = Astro.props;
+---
+
+<span>
+    {
+        (transcription == "broad" ? (<span class="font-ipa">/{characters}/</span>) : (<span class="font-ipa">[{characters}]</span>))
+    }
+    {
+        (phonetic && (<span class="italic">{phonetic}</span>))
+    }
+</span>
