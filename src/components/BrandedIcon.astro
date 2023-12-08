@@ -8,11 +8,12 @@ interface Props {
     width?: string;
     class?: string;
     rel?: string; // this is only to get the Astro type checker to shut up.
+    label: string;
 }
 
-const { url, icon, height, width, rel, class: className } = Astro.props;
+const { url, icon, height, width, rel, label, class: className } = Astro.props;
 ---
 
-<a href={url} class:list={[className]} rel={rel}>
+<a href={url} class:list={[className]} rel={rel} aria-label={label}>
     <Icon name={icon} height={height} width={width} />
 </a>
