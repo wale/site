@@ -10,7 +10,8 @@ export default defineConfig({
   site: "https://wale.au",
   markdown: {
     shikiConfig: {
-      theme: "css-variables"
+      theme: "css-variables",
+      wrap: true
    }
   }
 });
