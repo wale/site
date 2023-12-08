@@ -20,6 +20,11 @@ const { Content } = await entry.render();
     <Nav />
     <section class="pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
         <header class="flex flex-col gap-3">
+            {
+                entry.data.image && (
+                    <img src={entry.data.image} />
+                )
+            }
             <h1 class="text-4xl font-black">{entry.data.title}</div>
             <div class="text-2xl font-medium">{entry.data.description}</div>
             {
