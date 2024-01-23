@@ -32,7 +32,7 @@ const blogPosts = await getCollection("blog");
         </header>
         <div class="flex flex-col gap-2">
             {
-                blogPosts.map(({ data, slug }) => (
+                blogPosts.sort((a, b) => +b.data.published - +a.data.published).map(({ data, slug }) => (
                   <article class="post">
                     <a class="flex flex-col gap-2 p-5" href={`/blog/${slug}`}>
                       <h2 class="text-2xl font-bold">{data.title}</h2>
