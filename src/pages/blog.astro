@@ -15,7 +15,7 @@ const blogPosts = await getCollection("blog");
     description="Wale's blog posts."
 >
     <Nav />
-    <section class="flex flex-col gap-4 pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
+    <main class="flex flex-1 flex-col gap-4 pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
         <header class="flex flex-col gap-4">
             <h1 class="text-4xl font-bold">Posts</h1>
             <span class="text-xl font-regular">
@@ -51,8 +51,8 @@ const blogPosts = await getCollection("blog");
                   </article>
                 ))
               }
-        </main>
-    </section>
+        </div>
+      </main>
     <Footer />
 </Layout>
 <style>
