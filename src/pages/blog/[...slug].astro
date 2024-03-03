@@ -4,6 +4,7 @@ import Nav from "~/components/Nav.astro";
 import Footer from "~/components/Footer.astro";
 
 import { getCollection } from "astro:content";
+import ArticleLayout from "~/layouts/ArticleLayout.astro";
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection("blog");
@@ -17,7 +18,13 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title} description={entry.data.description} image={entry.data.image ?? "/og_image.png"} ogType="article">
+<ArticleLayout title={entry.data.title} 
+    description={entry.data.description} 
+    image={entry.data.image ?? "/og_image.png"} 
+    ogType="article" 
+    pubDate={entry.data.published.toDateString()} 
+    modDate={entry.data.published.toDateString()}
+>
     <Nav />
     <section class="pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
         <header class="flex flex-col gap-3">

@@ -1,0 +1,50 @@
+---
+import { SEO } from "astro-seo";
+import { SITE_NAME } from "~/config";
+
+interface Props {
+    title: string;
+    description: string;
+    image?: string | undefined;
+    type?: string | undefined;
+    pubDate?: string | undefined;
+    modDate?: string | undefined;
+}
+const {title, description, image, type, pubDate, modDate} = Astro.props;
+---
+<head>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script
+        src="/stats/js/script.js"
+        data-api="/stats/api/event"
+        data-domain="wale.au"
+    ></script>
+    <SEO 
+        title={title}
+        description={description}
+        openGraph={{
+            basic: {
+                title: `${title}`,
+                type: (type ?? "website"),
+                image: (image ?? "/og_image.png"),
+            },
+            article: {
+                publishedTime: pubDate,
+                modifiedTime: modDate,
+                authors: ["https://wale.au"]
+            },
+            optional: {
+                description: description,
+                siteName: SITE_NAME
+            },
+        }}
+        twitter={{
+            creator: "@spellsaidwrong"
+        }}
+    />
+    <slot />
+</head>

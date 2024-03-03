@@ -6,18 +6,21 @@ import "@fontsource/iosevka";
 import "~/styles/global.css";
 
 import Head from "~/components/Head.astro";
+import ArticleHead from "~/components/ArticleHead.astro";
 
 interface Props {
     description?: string;
     title: string;
     image?: string | undefined;
     ogType?: string;
+    pubDate?: string | undefined;
+    modDate?: string | undefined;
 }
-const { description, title, ogType, image } = Astro.props;
+const { description, title, ogType, image, pubDate, modDate } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
-    <Head title={title} description={description ?? "Duale Siad"} image={image} type={ogType} />
+    <ArticleHead title={title} description={description ?? "Duale Siad"} image={image} type={ogType} pubDate={pubDate} modDate={modDate} />
     <body class="flex flex-col flex-grow bg-grayscale-300 md:text-2xl text-grayscale-950 text-xl h-screen">
         <slot />
     </body>
