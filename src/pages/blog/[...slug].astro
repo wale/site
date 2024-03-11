@@ -27,22 +27,24 @@ const { Content } = await entry.render();
 >
     <Nav />
     <section class="pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
-        <header class="flex flex-col gap-3">
+        <header class="flex flex-col justify-center gap-3">
             {
                 entry.data.image && (
-                    <img src={entry.data.image} />
+                    <img src={entry.data.image} class="rounded-lg" />
                 )
             }
-            <h1 class="text-4xl font-black">{entry.data.title}</div>
-            <div class="text-2xl font-medium">{entry.data.description}</div>
-            {
-                (entry.data.published || entry.data.updated) && (
-                    <div class="flex flex-col gap-1 text-sm font-light">
-                        {entry.data.published && <span>Published at {entry.data.published}</span>}
-                        {entry.data.updated && <span>Updated at {entry.data.updated}</span>}
-                    </div>
-                )
-            }
+            <div class="flex flex-col">
+                <h1 class="text-4xl font-black">{entry.data.title}</div>
+                <div class="text-2xl font-medium">{entry.data.description}</div>
+                    {
+                        (entry.data.published || entry.data.updated) && (
+                            <div class="flex flex-col gap-1 text-sm font-light">
+                                {entry.data.published && <span>Published at {entry.data.published}</span>}
+                                {entry.data.updated && <span>Updated at {entry.data.updated}</span>}
+                            </div>
+                        )
+                    }
+            </div>
             <div class="flex flex-row gap-2">
                 {
                     entry.data.tags.map((tag) => (

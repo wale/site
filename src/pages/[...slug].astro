@@ -20,19 +20,21 @@ const { Content } = await entry.render();
 <Layout title={entry.data.title} description={entry.data.description}>
     <Nav />
     <section class="pl-10 pb-10 pr-7 max-w-5xl w-full self-center">
-        <header class="flex flex-col gap-3">
-            <h1 class="text-4xl font-black">{entry.data.title}</div>
-            <div class="text-2xl font-medium">{entry.data.description}</div>
-            {
-                (entry.data.published || entry.data.updated) && (
-                    <div class="flex flex-col gap-1 text-sm font-light">
-                        {entry.data.published && <span>Published at {entry.data.published}</span>}
-                        {entry.data.updated && <span>Updated at {entry.data.updated}</span>}
-                    </div>
-                )
-            }
+        <header class="flex flex-col justify-center gap-3">
+            <div class="flex flex-col">
+                <h1 class="text-4xl font-black">{entry.data.title}</div>
+                <div class="text-2xl font-medium">{entry.data.description}</div>
+                    {
+                        (entry.data.published || entry.data.updated) && (
+                            <div class="flex flex-col gap-1 text-sm font-light">
+                                {entry.data.published && <span>Published at {entry.data.published}</span>}
+                                {entry.data.updated && <span>Updated at {entry.data.updated}</span>}
+                            </div>
+                        )
+                    }
+            </div>
         </header>
-        <main class="article-content prose prose-hr:text-grayscale-950">
+        <main class="pt-4 article-content prose prose-hr:text-grayscale-950">
             <Content />
         </main>
     </section>
