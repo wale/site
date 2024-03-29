@@ -9,10 +9,10 @@ export default {
 			fontFamily: {
 				sans: [
 					"GeneralSans-Variable",
-					{
+					/** {
 						fontFeatureSettings: "'ss01'", // Alternate lowercase 'a'.
 						fontVariationSettings: "'wght'"
-					},
+					}, */
 					...defaultTheme.fontFamily.sans
 				],
 				mono: [
