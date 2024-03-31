@@ -2,6 +2,7 @@
 title: "Found a new 'forge'"
 description: "Moving to a new hosted repository hosting solution, away from Github."
 published: 2024-03-29T06:10:00Z
+updated: 2024-03-31T14:31:45Z
 tags: ["programming", "git", "open-source"]
 ---
 
@@ -22,7 +23,7 @@ I have never really been impressed with the decisions of Github, especially beca
 The [Software Freedom Conservancy](https://sfconservancy.org/GiveUpGitHub/) have also called on developers to give up Github, for much of the same reasons, and I would rather follow the organisations who aim to keep open-source alive - over a for-profit company that stands to gain a profit off the backs of the very developers that utilise it.
 
 ## Why Codeberg?
-[Codeberg](https://codeberg.org) is a non-profit Git-based collaboration platform domiciled in Germany, and they aim to provide a safer open-source community without tracking or profiteering. Codeberg is also the custodian of the aforementioned Git project [Forgejo](https://forgejo.org), a soft-fork of Gitea. Over the past few years I've watched Codeberg grow, it has grown to hold a large community passionate about the open-source moment.
+[Codeberg](https://codeberg.org) is a non-profit Git-based collaboration platform domiciled in Germany, and they aim to provide a safer open-source community without tracking or profiteering. Codeberg is also the custodian of the aforementioned Git project [Forgejo](https://forgejo.org), a soft-fork of Gitea. Over the past few years I've watched Codeberg grow, it has grown to hold a large community passionate about the open-source movement.
 
 I've also chosen Codeberg due to my familiarity to the user interface due to my experience hosting Gitea & Forgejo, which provide a better development experience in my opinion - especially compared to my time trying to learn how to use [SourceHut](https://sr.ht), which felt like it harked back to an era of mailing list patches being ubiquitous.
 
