@@ -1,0 +1,4 @@
+# --- BEGIN wale.au/ssh.txt ---
+sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIHA82j2RX3VuobyMoyuYuujwV2ynmLK5SuXJ8LtJTgjjAAAAD3NzaDpnaXQtbWFjaGluZQ== wale@yk-main
+sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIFFBrFwRX7g4RboDyYv7OdctPFpp1AUfa1PWSFsepUcAAAAAD3NzaDpnaXQtbWFjaGluZQ== wale@yk-alt
+# --- END wale.au/ssh.txt ---
