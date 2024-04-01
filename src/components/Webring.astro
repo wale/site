@@ -1,0 +1,38 @@
+---
+interface Site {
+  url: string;
+  image: string;
+  alt: string;
+}
+
+const sites = [
+  { url: "https://wale.au", image: "/ring/wale.png", alt: "Wale" },
+  { url: "https://ovyerus.com", image: "/ring/ovyerus.png", alt: "Ovyerus" },
+  {
+    url: "https://zvava.org",
+    image: "/ring/zvava.png",
+    alt: "Sophia (zvava.org)",
+  },
+  {
+    url: "https://arciniega.one",
+    image: "/ring/solely.png",
+    alt: "solely (arciniega.one)",
+  },
+] satisfies Site[];
+---
+
+<div class="flex flex-row gap-2">
+  {
+    sites.map((s) => (
+      <a href={s.url}>
+        <img
+          src={`${s.image}`}
+          alt={s.alt}
+          width="88"
+          height="31"
+          aria-label={s.alt}
+        />
+      </a>
+    ))
+  }
+</div>

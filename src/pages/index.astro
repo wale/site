@@ -6,6 +6,7 @@ import Logo from "~/components/Logo.astro";
 import Icon from "~/components/BrandedIcon.astro";
 
 import { SITE_NAME, SITE_DESCRIPTION } from "~/config";
+import Webring from "~/components/Webring.astro";
 ---
 
 <Layout title={SITE_NAME} description={SITE_DESCRIPTION}>
@@ -26,6 +27,7 @@ import { SITE_NAME, SITE_DESCRIPTION } from "~/config";
                 <a href="/work" class="link">Work</a>
             </div>
         </div>
+        <Webring />
     </Hero>
 </Layout>
 <style lang="scss">
