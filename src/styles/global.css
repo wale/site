@@ -2,3 +2,28 @@
 @tailwind components;
 @tailwind variants;
 @tailwind utilities;
+
+.article-content {
+    @apply max-w-none not-italic;
+    @apply prose-headings:relative;
+    @apply pr-8 py-8;
+
+    > * {
+        @apply text-grayscale-950;
+    }
+
+    :is(a, strong, code) {
+        @apply text-grayscale-950;
+    }
+
+    a {
+        @apply font-light underline underline-offset-4;
+    }
+    
+    .astro-code {
+        @apply border border-grayscale-950;
+        --astro-code-color-background: rgb(242, 242, 242);
+        --astro-code-color-text: rgb(142, 142, 142);
+        --astro-code-token-string-expression: rgb(121, 121, 121);
+    }
+}

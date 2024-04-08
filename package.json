@@ -1,6 +1,5 @@
 {
   "name": "site",
-  "type": "module",
   "version": "5.0.0",
   "scripts": {
     "dev": "astro dev",
@@ -28,6 +27,7 @@
     "@wale/voces": "^1.0.0",
     "astro-iconify": "^1.2.0",
     "astro-seo": "^0.8.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "ts-node": "^10.9.2"
   }
 }
