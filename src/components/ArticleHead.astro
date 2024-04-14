@@ -29,13 +29,13 @@ const {title, description, image, type, pubDate, modDate} = Astro.props;
         openGraph={{
             basic: {
                 title: `${title}`,
-                type: (type ?? "website"),
+                type: (type ?? "article"),
                 image: (image ?? "/og_image.png"),
             },
             article: {
                 publishedTime: pubDate,
                 modifiedTime: modDate,
-                authors: ["https://wale.au"]
+                authors: ["https://wale.au"],
             },
             optional: {
                 description: description,
