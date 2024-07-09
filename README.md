@@ -1,3 +1,7 @@
+> [!NOTE]  
+>
+> This repository is no longer updated, refer to the [Codeberg repository](<https://codeberg.org/wale/site>) for the up-to-date source code.
+
 # `wale/site`
 This repository holds the source code for my website, written using [Astro](https://astro.build).
 
